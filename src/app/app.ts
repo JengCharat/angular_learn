@@ -1,6 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+type FriendItem = {
+  id: number;
+  name: string;
+};
 @Component({
   selector: 'app-root',
   imports: [FormsModule],
@@ -27,4 +31,10 @@ export class App {
   username: string = 'Jeng twoway ';
 
   islogin: boolean = false;
+
+  friend_name: FriendItem[] = [
+    { id: 1, name: 'Jame' },
+    { id: 2, name: 'Jeng' },
+    { id: 3, name: 'John' },
+  ];
 }

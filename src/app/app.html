@@ -23,3 +23,10 @@
 } @else {
   <h1>welcome {{ username }}</h1>
 }
+
+<!-- for loop -->
+@for (friend of friend_name; track friend.id) {
+  <h1>{{ friend.name }}</h1>
+} @empty {
+  <h1>no data</h1>
+}

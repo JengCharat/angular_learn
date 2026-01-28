@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgClass } from '@angular/common';
+
 type FriendItem = {
   id: number;
   name: string;
 };
 @Component({
   selector: 'app-root',
-  imports: [FormsModule],
+  imports: [FormsModule, NgClass],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

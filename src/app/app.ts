@@ -25,4 +25,6 @@ export class App {
   }
 
   username: string = 'Jeng twoway ';
+
+  islogin: boolean = false;
 }

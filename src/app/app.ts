@@ -9,4 +9,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('my-project');
+  name: String = 'Jeng';
+  age: number = 20;
+  birth_year: number = 2548;
+  cal_year(): number {
+    return this.birth_year - 543;
+  }
 }

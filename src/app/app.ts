@@ -15,4 +15,9 @@ export class App {
   cal_year(): number {
     return this.birth_year - 543;
   }
+
+  cat_img: string =
+    'https://static.vecteezy.com/system/resources/thumbnails/050/393/628/small/cute-curious-gray-and-white-kitten-in-a-long-shot-photo.jpg';
+  width: number = 700;
+  height: number = 350;
 }

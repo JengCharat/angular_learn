@@ -9,4 +9,5 @@ import { input } from '@angular/core';
 })
 export class Header {
   title = input<string>();
+  title2 = input<string>();
 }

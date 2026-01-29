@@ -4,9 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { CurrencyPipe, LowerCasePipe, NgClass, UpperCasePipe, DatePipe } from '@angular/common';
 import { Navbar } from './navbar/navbar';
 import { Header } from './header/header';
+import { ItemComponent } from './item-component/item-component';
 type FriendItem = {
   id: number;
   name: string;
+};
+type multiItem = {
+  id: number;
+  name: string;
+  salary: number;
 };
 @Component({
   selector: 'app-root',
@@ -19,6 +25,7 @@ type FriendItem = {
     DatePipe,
     Navbar,
     Header,
+    ItemComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -69,5 +76,8 @@ export class App {
     this.exp.update((value) => value + 1);
   }
 
-  title = input<string>();
+  title: multiItem[] = [
+    { id: 1, name: 'Jeng', salary: 30000 },
+    { id: 2, name: 'John', salary: 25000 },
+  ];
 }

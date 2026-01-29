@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CurrencyPipe, LowerCasePipe, NgClass, UpperCasePipe, DatePipe } from '@angular/common';
@@ -46,6 +46,9 @@ export class App {
 
   fname = signal<string>('Jeng');
   lname = signal<string>('Charat');
+  fullname = computed(() => {
+    return this.fname() + this.lname();
+  });
   exp = signal<number>(3);
   skill = signal<string[]>(['c', 'python', 'java']);
   changename() {

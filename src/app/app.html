@@ -1,7 +1,7 @@
 <app-navbar />
 <app-header title="this is header test sendto header component" />
-<app-item-component [id]="title[0].id" [name]="title[0].name" [salary]="title[0].salary" />
-<app-item-component [id]="title[1].id" [name]="title[1].name" [salary]="title[1].salary" />
+<app-item-component [id]="title[0].id" [name]="title[0].name" [salary]="title[0].salary" (ondelete)="removeDataById($event)"/>
+<app-item-component [id]="title[1].id" [name]="title[1].name" [salary]="title[1].salary" (ondelete)="removeDataById($event)"/>
 <!-- <app-item-component /> -->
 <h1 class="text-red-500">this is my first angular</h1>
 <h1>name {{ name }}</h1>

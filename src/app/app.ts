@@ -80,4 +80,8 @@ export class App {
     { id: 1, name: 'Jeng', salary: 30000 },
     { id: 2, name: 'John', salary: 25000 },
   ];
+
+  removeDataById(id: number) {
+    alert(id);
+  }
 }

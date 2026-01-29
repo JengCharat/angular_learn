@@ -2,13 +2,14 @@ import { Component, signal, computed } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CurrencyPipe, LowerCasePipe, NgClass, UpperCasePipe, DatePipe } from '@angular/common';
+import { Navbar } from './navbar/navbar';
 type FriendItem = {
   id: number;
   name: string;
 };
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, NgClass, UpperCasePipe, LowerCasePipe, CurrencyPipe, DatePipe],
+  imports: [FormsModule, NgClass, UpperCasePipe, LowerCasePipe, CurrencyPipe, DatePipe, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

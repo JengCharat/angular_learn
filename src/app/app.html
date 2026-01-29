@@ -41,3 +41,17 @@
 <h1>this is date {{ date_pipe | date: 'shortDate' }}</h1>
 <h1>this is date {{ date_pipe | date }}</h1>
 <h1>this is date {{ date_pipe | date: 'fullDate' }}</h1>
+
+<!-- writeable signal -->
+<h1>fname : {{ fname() }}</h1>
+<h1>lname : {{ lname() }}</h1>
+<h1>exp : {{ exp() }}</h1>
+
+@for (item of skill(); track $index) {
+  <h1>{{ item }}</h1>
+} @empty {
+  <h1>no data</h1>
+}
+<button class="bg-gray-300" (click)="changename()">change name</button>
+<br />
+<button class="bg-gray-300" (click)="addexp()">add exp</button>

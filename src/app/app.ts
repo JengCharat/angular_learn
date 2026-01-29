@@ -43,4 +43,15 @@ export class App {
   lowercase_test: string = 'JENG';
   salary: number = 30000;
   date_pipe: string = '01/29/2569';
+
+  fname = signal<string>('Jeng');
+  lname = signal<string>('Charat');
+  exp = signal<number>(3);
+  skill = signal<string[]>(['c', 'python', 'java']);
+  changename() {
+    this.fname.set('change name to 2124');
+  }
+  addexp() {
+    this.exp.update((value) => value + 1);
+  }
 }

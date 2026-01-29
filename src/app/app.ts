@@ -1,20 +1,30 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, signal, computed, input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CurrencyPipe, LowerCasePipe, NgClass, UpperCasePipe, DatePipe } from '@angular/common';
 import { Navbar } from './navbar/navbar';
+import { Header } from './header/header';
 type FriendItem = {
   id: number;
   name: string;
 };
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, NgClass, UpperCasePipe, LowerCasePipe, CurrencyPipe, DatePipe, Navbar],
+  imports: [
+    FormsModule,
+    NgClass,
+    UpperCasePipe,
+    LowerCasePipe,
+    CurrencyPipe,
+    DatePipe,
+    Navbar,
+    Header,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('my-project');
+  // protected readonly title = signal('my-project');
   name: String = 'Jeng';
   age: number = 20;
   birth_year: number = 2548;
@@ -58,4 +68,6 @@ export class App {
   addexp() {
     this.exp.update((value) => value + 1);
   }
+
+  title = input<string>();
 }

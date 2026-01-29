@@ -5,6 +5,7 @@ import { CurrencyPipe, LowerCasePipe, NgClass, UpperCasePipe, DatePipe } from '@
 import { Navbar } from './navbar/navbar';
 import { Header } from './header/header';
 import { ItemComponent } from './item-component/item-component';
+import { Addform } from './addform/addform';
 type FriendItem = {
   id: number;
   name: string;
@@ -26,6 +27,7 @@ type multiItem = {
     Navbar,
     Header,
     ItemComponent,
+    Addform,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

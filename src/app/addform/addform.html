@@ -1,8 +1,8 @@
 <h1 class="text-lime-400">this is form component</h1>
-<form action="">
+<form (ngSubmit)="addNewEmp()">
   <label for="name">name:</label>
   <input type="text" [(ngModel)]="name3" name="name" />
   <label for="salary">salary</label>
   <input type="number" [(ngModel)]="salary3" name="salary" />
-  <button class="border-amber-50 border">save</button>
+  <button class="border-amber-50 border" type="submit">save</button>
 </form>

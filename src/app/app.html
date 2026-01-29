@@ -69,4 +69,10 @@
 
 
 <!-- form -->
-<app-addform/>
+<app-addform (onsave)="insertData($event)"/>
+
+@for (emp of data4; track emp.id) {
+  <h1>{{ emp.name }}</h1>
+} @empty {
+  <h1>no data</h1>
+}

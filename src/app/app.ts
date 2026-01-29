@@ -91,4 +91,11 @@ export class App {
   removeDataById(id: number) {
     alert(id);
   }
+  data4: Employee[] = [
+    { id: 1, name: 'Jeng', salary: 30000 },
+    { id: 2, name: 'John', salary: 25000 },
+  ];
+  insertData(emp: Employee) {
+    this.data4.push(emp);
+  }
 }

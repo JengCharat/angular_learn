@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Employee } from '../app';
+import { output } from '@angular/core';
 @Component({
   selector: 'app-addform',
   imports: [FormsModule],
@@ -11,12 +12,14 @@ import { Employee } from '../app';
 export class Addform {
   name3 = signal('admin');
   salary3 = signal(15000);
+  onsave = output<Employee>();
   addNewEmp() {
     let emp: Employee = {
       id: Math.floor(Math.random() * 1000),
       name: this.name3(),
       salary: this.salary3(),
     };
+    this.onsave.emit(emp);
     alert('save emp data');
   }
 }

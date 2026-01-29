@@ -33,3 +33,11 @@
 
 <!-- ng class -->
 <h1 [ngClass]="islogin ? 'text-red-300' : 'text-blue-500'">ng class is login or not</h1>
+
+<!-- pipe -->
+<h1>this is {{ uppercase_test | uppercase }} to uppercase</h1>
+<h1>this is {{ uppercase_test | lowercase }} to lowercase</h1>
+<h1>this is currency {{ salary | currency: '฿' }}</h1>
+<h1>this is date {{ date_pipe | date: 'shortDate' }}</h1>
+<h1>this is date {{ date_pipe | date }}</h1>
+<h1>this is date {{ date_pipe | date: 'fullDate' }}</h1>

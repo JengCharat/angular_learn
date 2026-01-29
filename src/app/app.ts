@@ -1,15 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgClass } from '@angular/common';
-
+import { CurrencyPipe, LowerCasePipe, NgClass, UpperCasePipe, DatePipe } from '@angular/common';
 type FriendItem = {
   id: number;
   name: string;
 };
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, NgClass],
+  imports: [FormsModule, NgClass, UpperCasePipe, LowerCasePipe, CurrencyPipe, DatePipe],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -39,4 +38,9 @@ export class App {
     { id: 2, name: 'Jeng' },
     { id: 3, name: 'John' },
   ];
+
+  uppercase_test: string = 'Jeng';
+  lowercase_test: string = 'JENG';
+  salary: number = 30000;
+  date_pipe: string = '01/29/2569';
 }

@@ -4,6 +4,11 @@ import { Secondpage } from './page/secondpage/secondpage';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'firstpage',
+    pathMatch: 'full',
+  },
+  {
     path: 'firstpage',
     component: Firstpage,
   },
